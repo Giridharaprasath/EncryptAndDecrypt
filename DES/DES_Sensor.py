@@ -15,7 +15,7 @@ print("Got Key From Server")
 while True:
     cipher_des = DES.new(key, DES.MODE_EAX)
 
-    print("Sending IV value to Server")
+    print("Sending nonce value to Server")
     sock.sendall(cipher_des.nonce)   # type: ignore
 
     data = str(randint(0, 1000))
