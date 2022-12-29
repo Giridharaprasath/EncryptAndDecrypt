@@ -4,7 +4,7 @@ from Crypto import Random
 key = Random.get_random_bytes(16)
 cipher = AES.new(key, AES.MODE_EAX)
 
-data = "Welcome to copyassignment.com!".encode()
+data = "Hello this is encrypted using AES".encode()
 
 nonce = cipher.nonce  # type: ignore
 

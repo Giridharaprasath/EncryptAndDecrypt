@@ -15,7 +15,7 @@ print("Got Key From Server")
 while True:
     cipher_aes = AES.new(key, AES.MODE_EAX)
 
-    print("Sending IV value to Server")
+    print("Sending nonce value to Server")
     sock.sendall(cipher_aes.nonce)   # type: ignore
 
     data = str(randint(0, 1000))
