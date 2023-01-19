@@ -1,0 +1,25 @@
+Taken Random String Length of 10000000
+
+
+DES - 
+    symmetric block cipher
+    fixed data block size of 8 bytes
+    EAX mode
+    need to create new cipher key for encrypt and decrypt
+    need nonce for decrypt
+    Just encrypt and decrypt
+        Took 347.1873999997115  ms to encrypt
+        Took 347.67680000004475  ms to decrypt
+    With Socket Program
+        Took 1730.467100000169  ms total time
+    
+AES - 
+    symmetric block cipher
+    fixed data block size of 16 bytes
+    EAX mode
+    need to create new cipher key for encrypt and decrypt
+    Just encrypt and decrypt
+        Took 41.377600000032544  ms to encrypt
+        Took 42.49979999985953  ms to decrypt
+    With Socket Program
+        Took 1443.883900000401  ms total time
