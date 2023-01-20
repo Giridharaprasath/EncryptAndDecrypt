@@ -12,6 +12,8 @@ DES -
         Took 347.67680000004475  ms to decrypt
     With Socket Program
         Took 1730.467100000169  ms total time
+    With Socket Program for 64 string long data
+        Took 3.625699999247445  ms total time
     
 AES - 
     symmetric block cipher
@@ -23,3 +25,52 @@ AES -
         Took 42.49979999985953  ms to decrypt
     With Socket Program
         Took 1443.883900000401  ms total time
+    With Socket Program for 64 string long data
+        Took 3.4974000009242445  ms total time
+
+RSA -
+    asymmetric cipher
+    use public key to encrypt the data
+    use private key to decrypt the data
+    need to create new cipher key for encrypt from public key 
+    create another cipher key for decrypt from private key
+    can't encrypt long size data
+    Just encrypt and decrypt
+        Took 2.2600999982387293  ms to encrypt
+        Took 2.556799998274073  ms to encrypt
+    With Socket Program for 64 string long data
+        Took 17.320599999948172  ms total time
+
+ARC2 -
+    symmetric stream cipher
+    key size of 16 bytes
+    not in use anymore
+    Just encrypt and decrypt
+        Took 621.1891999992076  ms to encrypt
+        Took 618.0778000016289  ms to decrypt
+    With Socket Program
+        Took 2292.9700999957277  ms total time
+    With Socket Program for 64 string long data
+        Took 2.8481999979703687  ms total time
+
+Salsa20 -
+    symmetric stream cipher
+    key size of 32 bytes
+    Just encrypt and decrypt
+        Took 66.97569999960251  ms to encrypt
+        Took 69.77139999798965  ms to decrypt
+    With Socket Program
+        Took 1637.4455000041053  ms total time
+    With Socket Program for 64 string long data
+        Took 1.8619000038597733  ms total time
+
+Blowfish -
+    symmetric block cipher
+    fixed data block size of 8 bytes
+    Just encrypt and decrypt
+        Took 250.6601999994018  ms to encrypt
+        Took 247.894100000849  ms to decrypt
+    With encrypt and decrypt
+        Took 1612.4955999985104  ms total time
+    With Socket Program for 64 string long data
+        Took 3.025300000444986  ms total time
