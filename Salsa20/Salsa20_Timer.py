@@ -7,7 +7,7 @@ key = Random.get_random_bytes(32)
 
 cipher = Salsa20.new(key)
 
-randomtext = ''.join(random.choices(string.ascii_letters, k = 10000000))
+randomtext = ''.join(random.choices(string.ascii_letters, k = 64))
 plaintext = randomtext.encode()
 nonce = cipher.nonce  # type: ignore
 

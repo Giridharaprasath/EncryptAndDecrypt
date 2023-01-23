@@ -8,7 +8,7 @@ key = Random.get_random_bytes(8)
 
 cipher = DES.new(key, DES.MODE_EAX)
 
-randomtext = ''.join(random.choices(string.ascii_letters, k = 10000000))
+randomtext = ''.join(random.choices(string.ascii_letters, k = 64))
 plaintext = randomtext.encode()
 
 nonce = cipher.nonce  # type: ignore

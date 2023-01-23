@@ -5,7 +5,7 @@ import string, random
 from timeit import default_timer as timer
 
 random_gen = Random.new().read
-key = RSA.generate(1024, random_gen)
+key = RSA.generate(2048, random_gen)
 publickey = key.publickey()
 
 cipher_rsa = PKCS1_OAEP.new(publickey)

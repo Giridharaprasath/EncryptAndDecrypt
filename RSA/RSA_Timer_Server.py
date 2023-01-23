@@ -24,7 +24,7 @@ while True:
 
     startTime = timer() # * Start Time at client successful connection
 
-    print("Sending Public Key")
+    #print("Sending Public Key")
     conn.sendall(publickey)
 
     encoded_data = conn.recv(1024)

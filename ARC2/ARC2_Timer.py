@@ -8,7 +8,7 @@ key = Random.get_random_bytes(16)
 cipher = ARC2.new(key, ARC2.MODE_EAX)
 nonce = cipher.nonce # type: ignore
 
-randomtext = ''.join(random.choices(string.ascii_letters, k = 10000000))
+randomtext = ''.join(random.choices(string.ascii_letters, k = 64))
 plaintext = randomtext.encode()
 
 startTime = timer()
