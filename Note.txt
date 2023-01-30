@@ -74,3 +74,23 @@ Blowfish -
         Took 1612.4955999985104  ms total time
     With Socket Program for 64 string long data
         Took 3.025300000444986  ms total time
+
+Algorithms:
+
+Single DES:
+	It is a symmetric block cipher encryption algorithm. It has a fixed data block size of 8 bytes. Its keys are 64 bits long. DES was never cryptographically broken, but due to its short key length, the data can be hacked with brute force.
+
+AES:
+	It is a symmetric block cipher encryption algorithm. It has a fixed data block size of 16 bytes. The key length can also vary from the length of 128, 192, or 256 bits. AES is considered as the base standard algorithm for encryption, since it is very fast and secure.
+
+RSA:
+	It is an asymmetric block cipher encryption algorithm. It is the most widespread and used public key algorithm. Its security is based on the difficulty of factoring large integers, due to the fact that it is a very slow encryption algorithm.
+
+ARC2:
+	It is a symmetric block cipher encryption algorithm. It has a fixed data block size of 8 bytes. The key length can vary from the length of 8 to 128 bits. ARC2 is not cryptographically broken, but it is slightly slower when compared to AES.
+
+Salsa20:
+	It is a stream cipher encryption algorithm. The keys are 256 bits long, but can also work with 128 bit keys. Salsa20 doesn’t guarantee the authenticity of the encrypted data. Hackers can hack the data when in transition and can alter the data.
+
+Blowfish:
+	It is a symmetric block cipher encryption algorithm. It has a fixed data block size of 8 bytes. The key length can vary from the length of 32 to 448 bits. Blowfish is deemed secure and it is fast, but the length of the key should be long to withstand a brute force attack.
