@@ -26,11 +26,14 @@ while True:
 
     #print("Sending Public Key")
     conn.sendall(publickey)
+    i = 10
+    while i > 0:
+        
+        encoded_data = conn.recv(1024)
 
-    encoded_data = conn.recv(1024)
-
-    cipher_rsa = PKCS1_OAEP.new(key)
-    decoded_data = cipher_rsa.decrypt(encoded_data)
+        cipher_rsa = PKCS1_OAEP.new(key)
+        decoded_data = cipher_rsa.decrypt(encoded_data)
+        i -= 1
 
     endTime = timer() # * End Time after decrypting data
 

@@ -25,12 +25,15 @@ while True:
 
     print("Sending Key")
     conn.sendall(key)
+    i = 10
+    while i > 0:
 
-    nonce = conn.recv(1024)
-    encoded_data = conn.recv(1024)
-        
-    cipher_arc2 = ARC2.new(key, ARC2.MODE_EAX, nonce)
-    decoded_data = cipher_arc2.decrypt(encoded_data)
+        nonce = conn.recv(1024)
+        encoded_data = conn.recv(1024)
+            
+        cipher_arc2 = ARC2.new(key, ARC2.MODE_EAX, nonce)
+        decoded_data = cipher_arc2.decrypt(encoded_data)
+        i -= 1
     #print(decoded_data.decode())
     endTime = timer()
     totalTime = (endTime - startTime) * 1000.0

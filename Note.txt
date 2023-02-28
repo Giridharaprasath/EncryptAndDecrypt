@@ -94,3 +94,23 @@ Salsa20:
 
 Blowfish:
 	It is a symmetric block cipher encryption algorithm. It has a fixed data block size of 8 bytes. The key length can vary from the length of 32 to 448 bits. Blowfish is deemed secure and it is fast, but the length of the key should be long to withstand a brute force attack.
+
+With Raspberry Pi:
+
+DES
+    267.486500000814  ms total time
+
+AES
+    260.82780000392813  ms total time
+
+RSA
+    264.8867000004975  ms total time
+
+ARC2
+    267.5608999998076  ms total time
+
+Blowfish
+    271.11519999743905  ms total time
+
+Salsa20
+    264.22200000524754  ms total time

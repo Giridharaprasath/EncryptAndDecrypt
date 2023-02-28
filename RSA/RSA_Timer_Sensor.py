@@ -14,7 +14,7 @@ publickey = RSA.import_key(sock.recv(1024))
 
 cipher_rsa = PKCS1_OAEP.new(publickey)
 
-randomtext = ''.join(random.choices(string.ascii_letters, k = 64))
+randomtext = ''.join(random.choices(string.ascii_letters, k = 8))
 data = randomtext.encode()
 encoded_data = cipher_rsa.encrypt(data)
 

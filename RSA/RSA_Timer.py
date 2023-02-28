@@ -10,7 +10,7 @@ publickey = key.publickey()
 
 cipher_rsa = PKCS1_OAEP.new(publickey)
 
-randomtext = ''.join(random.choices(string.ascii_letters, k = 64))
+randomtext = ''.join(random.choices(string.ascii_letters, k = 8))
 plaintext = randomtext.encode()
 
 startTime = timer()

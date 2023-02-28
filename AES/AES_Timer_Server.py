@@ -24,13 +24,17 @@ while True:
 
     print("Sending Key")
     conn.sendall(key)
+    i = 10
+    while i > 0:
 
-    nonce = conn.recv(1024)
-    encoded_data = conn.recv(1024)
+        nonce = conn.recv(1024)
+        encoded_data = conn.recv(1024)
 
-    cipher_aes = AES.new(key, AES.MODE_EAX, nonce)
+        cipher_aes = AES.new(key, AES.MODE_EAX, nonce)
 
-    decoded_data = cipher_aes.decrypt(encoded_data)
+        decoded_data = cipher_aes.decrypt(encoded_data)
+        
+        i -= 1
     
     endTime = timer() # * End Time after decrypting data
 

@@ -25,12 +25,15 @@ while True:
 
     print("Sending Key")
     conn.sendall(key)
+    i = 10
+    while i > 0:
 
-    nonce = conn.recv(1024)
-    encoded_data = conn.recv(1024)
+        nonce = conn.recv(1024)
+        encoded_data = conn.recv(1024)
 
-    cipher_blowfish = Blowfish.new(key, Blowfish.MODE_EAX, nonce)
-    decoded_data = cipher_blowfish.decrypt(encoded_data)
+        cipher_blowfish = Blowfish.new(key, Blowfish.MODE_EAX, nonce)
+        decoded_data = cipher_blowfish.decrypt(encoded_data)
+        i -= 1
     #print(decoded_data.decode())
 
     endTime = timer()
