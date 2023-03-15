@@ -11,15 +11,13 @@ sock.connect(('127.0.0.1', port))
 
 publickey = RSA.import_key(sock.recv(1024))
 #print("Got Public Key From Server")
-
 cipher_rsa = PKCS1_OAEP.new(publickey)
 
-randomtext = ''.join(random.choices(string.ascii_letters, k = 8))
-data = randomtext.encode()
+data = b'5'
 encoded_data = cipher_rsa.encrypt(data)
-
 #print("Sending Encrypted Data to Server: ")
 sock.sendall(encoded_data)
+
 time.sleep(2)
 
 sock.close()
