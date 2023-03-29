@@ -25,15 +25,14 @@ while True:
 
     print("Sending Key")
     conn.sendall(key)
-    i = 10
-    while i > 0:
-            
-        nonce = conn.recv(1024)
-        encoded_data = conn.recv(1024) 
 
-        cipher_salsa20 = Salsa20.new(key, nonce)
-        decoded_data = cipher_salsa20.decrypt(encoded_data)
-        i -= 1
+            
+    nonce = conn.recv(1024)
+    encoded_data = conn.recv(1024) 
+
+    cipher_salsa20 = Salsa20.new(key, nonce)
+    decoded_data = cipher_salsa20.decrypt(encoded_data)
+
     #print(decoded_data.decode())
 
     endTime = timer()
