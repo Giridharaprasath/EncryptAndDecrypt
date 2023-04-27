@@ -25,7 +25,6 @@ while True:
     print("Sending Key")
     conn.sendall(key)
 
-
     nonce = conn.recv(1024)
     encoded_data = conn.recv(1024)
 

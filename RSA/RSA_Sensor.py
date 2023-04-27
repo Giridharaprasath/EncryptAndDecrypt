@@ -19,7 +19,7 @@ while True:
     data = str(randint(0, 1000))
     encoded_data = cipher_rsa.encrypt(data.encode())
 
-    print("Sending Encrypted Data to Server: ")
+    print("Sending Encrypted Data to Server: ", data)
     sock.sendall(encoded_data)
     time.sleep(2)
 
